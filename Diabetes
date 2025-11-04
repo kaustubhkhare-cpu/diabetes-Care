@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Honest Health - Complete diabetes care at home in India. Expert doctors, nurses, FDA medications by Dr. Morepen. Shop diabetes supplements and care packages online.">
+    <meta name="keywords" content="diabetes care india, diabetes management, online diabetes store, diabetic supplements, blood sugar monitor, Dr Morepen products, home healthcare">
+    <title>Honest Health - Complete Diabetes Care at Home | Online Store & Care Packages</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+:root {
+    --primary-beige: #F5F1E8;
+    --secondary-beige: #E8DCC8;
+    --accent-gold: #C9A86A;
+    --dark-brown: #4A3F35;
+    --text-primary: #2C2416;
+    --text-secondary: #6B5D4F;
+    --white: #FFFFFF;
+    --success-green: #5C8E5A;
+    --light-gold: #F4ECD8;
+    --error-red: #D64545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--primary-beige);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-brown));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: var(--accent-gold);
+    transform: scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--error-red);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--dark-brown);
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--primary-beige) 0%, var(--secondary-beige) 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(201, 168, 106, 0.15) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-highlight {
+    color: var(--accent-gold);
+}
+
+.hero-tagline {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.primary-cta {
+    background: linear-gradient(135deg, var(--dark-brown), #5A4B3D);
+    color: var(--white);
+    padding: 1.3rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 30px rgba(74, 63, 53, 0.4);
+    display: inline-block;
+}
+
+.primary-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(201, 168, 106, 0.5);
+}
+
+.secondary-cta {
+    background: transparent;
+    color: var(--dark-brown);
+    padding: 1.3rem 3rem;
+    border: 2px solid var(--dark-brown);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.secondary-cta:hover {
+    background: var(--dark-brown);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-visual {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, var(--light-gold), var(--secondary-beige));
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Trust Slider Section */
+.trust-slider-section {
+    padding: 4rem 2rem;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.trust-slider-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.trust-slider {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 250px;
+    padding: 2rem;
+    background: var(--primary-beige);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.trust-icon {
+    font-size: 3rem;
+    color: var(--accent-gold);
+}
+
+.trust-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    font-family: 'Playfair Display', serif;
+}
+
+.trust-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, var(--white) 0%, var(--primary-beige) 100%);
+}
+
+.why-choose-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.section-subtitle {
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.why-choose-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+}
+
+.why-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.why-choose-card:nth-child(2) .why-icon {
+    animation-delay: 0.2s;
+}
+
+.why-choose-card:nth-child(3) .why-icon {
+    animation-delay: 0.4s;
+}
+
+.why-choose-card:nth-child(4) .why-icon {
+    animation-delay: 0.6s;
+}
+
+.why-title {
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.why-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Care Packages Section */
+.packages-section {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.packages-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.package-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--dark-brown));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.package-card:hover::before {
+    transform: scaleX(1);
+}
+
+.package-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.package-card.featured {
+    background: linear-gradient(135deg, var(--dark-brown), #5A4B3D);
+    color: white;
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--accent-gold);
+    color: white;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.package-tier {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.package-name {
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.package-card.featured .package-name {
+    color: white;
+}
+
+.package-price {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.package-card.featured .package-price {
+    color: var(--accent-gold);
+}
+
+.package-duration {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.package-card.featured .package-duration {
+    color: rgba(255,255,255,0.8);
+}
+
+.package-features {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.package-feature {
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.package-card.featured .package-feature {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+.check-icon {
+    color: var(--success-green);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.package-card.featured .check-icon {
+    color: var(--accent-gold);
+}
+
+.subscribe-btn {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.subscribe-btn:hover {
+    background: var(--dark-brown);
+    transform: scale(1.05);
+}
+
+.package-card.featured .subscribe-btn {
+    background: var(--accent-gold);
+}
+
+.package-card.featured .subscribe-btn:hover {
+    background: white;
+    color: var(--dark-brown);
+}
+
+/* Trust Indicators Section */
+.trust-indicators-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--dark-brown), #5A4B3D);
+    color: white;
+}
+
+.trust-indicators-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.trust-indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.trust-indicator-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.trust-indicator-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.05);
+}
+
+.trust-indicator-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+}
+
+.trust-indicator-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.trust-indicator-description {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Products Section */
+.products-section {
+    padding: 6rem 2rem;
+    background: var(--primary-beige);
+}
+
+.product-preview-text {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.view-all-products-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: var(--accent-gold);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.view-all-products-btn:hover {
+    background: var(--dark-brown);
+    transform: scale(1.05);
+}
+
+.products-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-color: var(--accent-gold);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--light-gold), var(--secondary-beige));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--success-green);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-category {
+    color: var(--accent-gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.product-name {
+    font-size: 1.3rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.product-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    padding: 1rem;
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--dark-brown);
+    transform: scale(1.05);
+}
+
+.view-details-btn {
+    padding: 1rem 1.5rem;
+    background: var(--primary-beige);
+    color: var(--dark-brown);
+    border: 2px solid var(--accent-gold);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background: var(--accent-gold);
+    color: white;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.how-it-works-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-brown));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.step-title {
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.step-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 6rem 2rem;
+    background: var(--primary-beige);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--accent-gold);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    color: var(--accent-gold);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--light-gold);
+}
+
+.faq-answer-content {
+    padding: 1.5rem 2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* CTA Banner Section */
+.cta-banner-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-brown));
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 10s ease-in-out infinite;
+}
+
+.cta-banner-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-banner-title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-banner-description {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.cta-banner-btn {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background: white;
+    color: var(--dark-brown);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.cta-banner-btn:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+    z-index: 2000;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 2rem;
+    background: var(--dark-brown);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 {
+    font-size: 1.8rem;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-cart:hover {
+    transform: rotate(90deg);
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--primary-beige);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    background: var(--light-gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-price {
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.qty-btn:hover {
+    background: var(--dark-brown);
+    transform: scale(1.1);
+}
+
+.qty-value {
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.remove-item {
+    background: var(--error-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.remove-item:hover {
+    transform: scale(1.05);
+}
+
+.cart-footer {
+    padding: 2rem;
+    background: var(--primary-beige);
+    border-top: 2px solid var(--accent-gold);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--dark-brown), #5A4B3D);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.empty-cart-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+/* Product Modal */
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-modal.open {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 30px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: var(--error-red);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.1) rotate(90deg);
+}
+
+.modal-product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.modal-product-image {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, var(--light-gold), var(--secondary-beige));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+}
+
+.modal-product-info h2 {
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.modal-product-category {
+    color: var(--accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.modal-product-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.modal-product-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.modal-variants {
+    margin-bottom: 2rem;
+}
+
+.modal-variant-label {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-brown);
+}
+
+.modal-variant-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.modal-variant-option {
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-beige);
+    border: 2px solid var(--accent-gold);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.modal-variant-option:hover,
+.modal-variant-option.active {
+    background: var(--accent-gold);
+    color: white;
+    transform: scale(1.05);
+}
+
+.modal-quantity {
+    margin-bottom: 2rem;
+}
+
+.modal-quantity-label {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-brown);
+}
+
+.modal-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modal-qty-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-qty-btn:hover {
+    background: var(--dark-brown);
+    transform: scale(1.1);
+}
+
+.modal-qty-value {
+    font-size: 2rem;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: center;
+}
+
+.modal-add-to-cart {
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--dark-brown), #5A4B3D);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-add-to-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-brown);
+    color: white;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-about h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-about p {
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links ul li a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--accent-gold);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.7;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    cursor: pointer;
+    z-index: 999;
+    animation: pulse 2s ease-in-out infinite;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Notification Toast */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    background: var(--success-green);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 4000;
+    animation: slideInRight 0.4s ease;
+    display: none;
+}
+
+.notification.show {
+    display: block;
+}
+
+.notification.error {
+    background: var(--error-red);
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 6rem 2rem 2rem;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-visual {
+        max-width: 350px;
+        height: 350px;
+        font-size: 7rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .package-card.featured {
+        transform: scale(1);
+    }
+    
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .modal-product-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-banner-title {
+        font-size: 2rem;
+    }
+    
+    .trust-indicators-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-visual {
+        max-width: 280px;
+        height: 280px;
+        font-size: 5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <div class="logo-icon">H+</div>
+                <span>Honest Health</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#packages">Care Packages</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li>
+                    <span class="cart-icon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </span>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Your Complete <span class="hero-highlight">Diabetes Care</span> Solution</h1>
+                <p class="hero-tagline">Expert doctors, professional nurses, FDA-approved medications, and premium supplements - all delivered to your home. Shop online or subscribe to comprehensive care packages.</p>
+                <div class="hero-cta-group">
+                    <a href="#packages" class="primary-cta">View Care Packages</a>
+                    <a href="#products" class="secondary-cta">Shop Products</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">💊</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Slider Section -->
+    <section class="trust-slider-section">
+        <div class="trust-slider-container">
+            <div class="trust-slider">
+                <div class="trust-item">
+                    <div class="trust-icon">🏥</div>
+                    <div class="trust-number">10,000+</div>
+                    <div class="trust-label">Happy Patients</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">👨‍⚕️</div>
+                    <div class="trust-number">50+</div>
+                    <div class="trust-label">Expert Doctors</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💊</div>
+                    <div class="trust-number">100%</div>
+                    <div class="trust-label">FDA Approved</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⭐</div>
+                    <div class="trust-number">4.8/5</div>
+                    <div class="trust-label">Customer Rating</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🚚</div>
+                    <div class="trust-number">24-48hr</div>
+                    <div class="trust-label">Fast Delivery</div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="trust-item">
+                    <div class="trust-icon">🏥</div>
+                    <div class="trust-number">10,000+</div>
+                    <div class="trust-label">Happy Patients</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">👨‍⚕️</div>
+                    <div class="trust-number">50+</div>
+                    <div class="trust-label">Expert Doctors</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💊</div>
+                    <div class="trust-number">100%</div>
+                    <div class="trust-label">FDA Approved</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⭐</div>
+                    <div class="trust-number">4.8/5</div>
+                    <div class="trust-label">Customer Rating</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🚚</div>
+                    <div class="trust-number">24-48hr</div>
+                    <div class="trust-label">Fast Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Packages Section -->
+    <section class="packages-section" id="packages">
+        <div class="section-header">
+            <div class="section-subtitle">Subscription Plans</div>
+            <h2 class="section-title">Comprehensive Care Packages</h2>
+            <p class="section-description">Subscribe to our complete diabetes care packages including doctor visits, nurse assistance, medications, monitoring equipment, and regular lab tests - all at one place.</p>
+        </div>
+
+        <div class="packages-grid" id="packagesGrid">
+            <!-- Packages will be dynamically inserted -->
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section" id="why-choose">
+        <div class="why-choose-container">
+            <div class="section-header">
+                <div class="section-subtitle">Why Choose Us</div>
+                <h2 class="section-title">Your Trusted Diabetes Care Partner</h2>
+                <p class="section-description">We bring together everything you need for diabetes management in one place - from expert medical care to premium supplements, all backed by trust and quality.</p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="why-icon">🏆</div>
+                    <h3 class="why-title">Complete Solution</h3>
+                    <p class="why-description">Everything you need for diabetes care at one place - doctors, nurses, medications, supplements, and lab tests. No need to go anywhere else.</p>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="why-icon">✅</div>
+                    <h3 class="why-title">Trusted Brand</h3>
+                    <p class="why-description">FDA-approved medications by Dr. Morepen and expert medical professionals. Over 10,000 satisfied patients trust us for their diabetes care.</p>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="why-icon">🏠</div>
+                    <h3 class="why-title">Home Delivery</h3>
+                    <p class="why-description">All services and products delivered to your doorstep. Expert nurses visit your home for regular check-ups and monitoring.</p>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="why-icon">💰</div>
+                    <h3 class="why-title">Affordable Plans</h3>
+                    <p class="why-description">Comprehensive care packages at prices that fit your budget. Save more with our subscription plans compared to individual services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators Section -->
+    <section class="trust-indicators-section">
+        <div class="trust-indicators-container">
+            <div class="section-header">
+                <div class="section-subtitle" style="color: var(--accent-gold);">Our Promise</div>
+                <h2 class="section-title" style="color: white;">Built on Trust & Quality</h2>
+                <p class="section-description" style="color: rgba(255,255,255,0.9);">We are committed to providing the highest standard of diabetes care with certified professionals and quality products.</p>
+            </div>
+
+            <div class="trust-indicators-grid">
+                <div class="trust-indicator-card">
+                    <div class="trust-indicator-icon">🔬</div>
+                    <h4 class="trust-indicator-title">FDA Certified</h4>
+                    <p class="trust-indicator-description">All medications are FDA approved and manufactured by trusted brands like Dr. Morepen</p>
+                </div>
+
+                <div class="trust-indicator-card">
+                    <div class="trust-indicator-icon">👨‍⚕️</div>
+                    <h4 class="trust-indicator-title">Expert Doctors</h4>
+                    <p class="trust-indicator-description">Board-certified diabetes specialists with years of experience</p>
+                </div>
+
+                <div class="trust-indicator-card">
+                    <div class="trust-indicator-icon">🔒</div>
+                    <h4 class="trust-indicator-title">Data Security</h4>
+                    <p class="trust-indicator-description">Your health data is protected with bank-level encryption</p>
+                </div>
+
+                <div class="trust-indicator-card">
+                    <div class="trust-indicator-icon">📞</div>
+                    <h4 class="trust-indicator-title">24/7 Support</h4>
+                    <p class="trust-indicator-description">Round-the-clock customer support for all your queries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <div class="section-subtitle">Premium Supplements</div>
+            <h2 class="section-title">Featured Diabetes Care Products</h2>
+            <p class="section-description">Browse our carefully selected range of FDA-approved supplements and diabetes care products manufactured by Dr. Morepen.</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Featured products will be dynamically inserted here -->
+        </div>
+
+        <div class="product-preview-text">
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1rem;">Showing featured products only</p>
+            <a href="#all-products" class="view-all-products-btn" onclick="showAllProducts(event)">View All Products →</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+        <div class="how-it-works-container">
+            <div class="section-header">
+                <div class="section-subtitle">Simple Process</div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">Get started with your diabetes care journey in just 4 simple steps</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Choose Your Plan</h3>
+                    <p class="step-description">Select a care package or shop individual products based on your needs</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Consult Expert</h3>
+                    <p class="step-description">Get connected with our diabetes specialists for personalized advice</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Home Delivery</h3>
+                    <p class="step-description">Receive medications, supplements, and monitoring equipment at your doorstep</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Regular Monitoring</h3>
+                    <p class="step-description">Track your progress with regular nurse visits and doctor consultations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <div class="section-subtitle">Got Questions?</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Find answers to common questions about our diabetes care services</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        What is included in the care packages?
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Our care packages include doctor consultations, nurse home visits, FDA-approved medications, blood glucose monitoring equipment with test strips, diet counseling sessions, and comprehensive lab tests (HbA1c, lipid profile, etc.). The exact inclusions vary by plan tier.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Are the medications FDA approved?
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, all our medications and supplements are FDA approved and manufactured by trusted brands like Dr. Morepen. We only provide quality products that meet international safety standards.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        How quickly will I receive my order?
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We offer fast delivery within 24-48 hours for most locations in India. For care package subscriptions, your initial kit will be delivered within 2-3 business days, and regular supplies will be delivered as per your schedule.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Can I cancel my subscription anytime?
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, you can cancel your subscription at any time. For monthly plans, you can cancel before the next billing cycle. For quarterly and annual plans, we offer pro-rated refunds based on unused services.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Do you provide emergency support?
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We provide 24/7 customer support for queries and assistance. For medical emergencies, we recommend contacting your nearest hospital or calling emergency services. Our doctors are available during scheduled consultation hours.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        What payment methods do you accept?
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We currently accept Cash on Delivery (COD) for all orders. Online payment options including UPI, credit/debit cards, and net banking will be available soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-banner-section">
+        <div class="cta-banner-container">
+            <h2 class="cta-banner-title">Ready to Take Control of Your Diabetes?</h2>
+            <p class="cta-banner-description">Join thousands of satisfied patients who trust Honest Health for their complete diabetes care. Start your journey to better health today!</p>
+            <a href="#packages" class="cta-banner-btn">Get Started Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Honest Health</h3>
+                <p>Your trusted partner for complete diabetes care. Expert medical professionals, quality medications, and comprehensive care packages delivered to your home. We bring together everything you need for diabetes management in one trusted place.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#products">Shop Products</a></li>
+                    <li><a href="#packages">Care Packages</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📞 +91 99999 99999</li>
+                    <li>📧 care@honesthealth.in</li>
+                    <li>🕐 Mon-Sat: 9 AM - 8 PM</li>
+                    <li>📍 Mumbai, Maharashtra</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Honest Health. All rights reserved. | Medications by Dr. Morepen</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content" id="modalContent">
+            <!-- Modal content will be dynamically inserted -->
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919999999999?text=Hi%2C%20I%20need%20help%20with%20Honest%20Health%20services" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <script>
+// Product Data
+const products = [
+    {
+        id: 1,
+        name: "Y Sugar Sweetener",
+        category: "supplements",
+        description: "Zero-calorie natural sweetener with sucralose. Perfect for diabetics managing blood sugar levels.",
+        price: 299,
+        image: "🍯",
+        badge: "Bestseller",
+        featured: true,
+        variants: [{name: "100 Tablets", price: 299}]
+    },
+    {
+        id: 2,
+        name: "Fibre-X Sat Isabgol",
+        category: "fiber",
+        description: "Natural psyllium husk for digestive health and blood sugar management. Helps maintain healthy cholesterol levels.",
+        price: 149,
+        image: "🌾",
+        badge: "Popular",
+        featured: true,
+        variants: [
+            {name: "10g Pack", price: 149},
+            {name: "50g Pack", price: 299},
+            {name: "100g Pack", price: 549},
+            {name: "200g Pack", price: 999}
+        ]
+    },
+    {
+        id: 3,
+        name: "Omega 500mg",
+        category: "supplements",
+        description: "Essential Omega-3 fatty acids for heart health and diabetes management. Supports cardiovascular function.",
+        price: 599,
+        image: "🐟",
+        badge: "Premium",
+        featured: true,
+        variants: [{name: "10 Softgels", price: 599}]
+    },
+    {
+        id: 4,
+        name: "Liv Healthy",
+        category: "supplements",
+        description: "Comprehensive liver health supplement for diabetics. Supports liver function and detoxification.",
+        price: 799,
+        image: "💊",
+        badge: "New",
+        featured: false,
+        variants: [
+            {name: "100 Tablets", price: 799},
+            {name: "200ml Syrup", price: 699}
+        ]
+    },
+    {
+        id: 5,
+        name: "VCalci D3 Sachets 60K",
+        category: "vitamins",
+        description: "High-potency Vitamin D3 and calcium for bone health. Essential for diabetics to maintain bone density.",
+        price: 399,
+        image: "☀️",
+        badge: "Recommended",
+        featured: true,
+        variants: [
+            {name: "4 Sachets", price: 399},
+            {name: "5ml Shot", price: 149}
+        ]
+    },
+    {
+        id: 6,
+        name: "VCalci Tablets",
+        category: "vitamins",
+        description: "Daily calcium supplement for strong bones and teeth. Diabetic-friendly formula.",
+        price: 449,
+        image: "💊",
+        featured: false,
+        variants: [{name: "15 Tablets", price: 449}]
+    },
+    {
+        id: 7,
+        name: "Multi-Vitamin Complete Wellness Gummy",
+        category: "gummies",
+        description: "Delicious sugar-free multivitamin gummies. Complete nutrition support for diabetics with essential vitamins and minerals.",
+        price: 299,
+        image: "🍬",
+        badge: "Tasty",
+        featured: true,
+        variants: [
+            {name: "10 Gummies", price: 299},
+            {name: "60 Gummies", price: 1499}
+        ]
+    },
+    {
+        id: 8,
+        name: "Bone Support Gummy",
+        category: "gummies",
+        description: "Targeted bone health support with calcium and Vitamin D in tasty gummy form. Sugar-free formula.",
+        price: 349,
+        image: "🦴",
+        featured: false,
+        variants: [
+            {name: "10 Gummies", price: 349},
+            {name: "60 Gummies", price: 1799}
+        ]
+    },
+    {
+        id: 9,
+        name: "Sharp Eye Vision Gummy",
+        category: "gummies",
+        description: "Eye health support with lutein and vitamins. Protects against diabetic retinopathy.",
+        price: 349,
+        image: "👁️",
+        badge: "Eye Care",
+        featured: true,
+        variants: [
+            {name: "10 Gummies", price: 349},
+            {name: "60 Gummies", price: 1799}
+        ]
+    },
+    {
+        id: 10,
+        name: "Relax Gummy",
+        category: "gummies",
+        description: "Stress relief and relaxation support. Helps manage diabetes-related stress and anxiety.",
+        price: 399,
+        image: "😌",
+        featured: false,
+        variants: [
+            {name: "10 Gummies", price: 399},
+            {name: "60 Gummies", price: 1999}
+        ]
+    },
+    {
+        id: 11,
+        name: "Iron Gummy",
+        category: "gummies",
+        description: "Iron supplementation in delicious gummy form. Prevents anemia common in diabetics.",
+        price: 349,
+        image: "⚡",
+        featured: false,
+        variants: [
+            {name: "10 Gummies", price: 349},
+            {name: "60 Gummies", price: 1799}
+        ]
+    },
+    {
+        id: 12,
+        name: "Premium ORS",
+        category: "ors",
+        description: "Advanced oral rehydration solution for quick hydration. Essential for diabetics to maintain electrolyte balance.",
+        price: 49,
+        image: "💧",
+        badge: "Essential",
+        featured: false,
+        variants: [
+            {name: "Orange Flavor 21.8g", price: 49},
+            {name: "Lemon Flavor 21.8g", price: 49}
+        ]
+    },
+    {
+        id: 13,
+        name: "Premium ORS Liquid",
+        category: "ors",
+        description: "Ready-to-drink ORS liquid. Convenient hydration solution for diabetics on-the-go.",
+        price: 99,
+        image: "🧃",
+        featured: false,
+        variants: [
+            {name: "Apple 200ml", price: 99},
+            {name: "Orange 200ml", price: 99},
+            {name: "Nimbu Pani 200ml", price: 99}
+        ]
+    }
+];
+
+// Package Data
+const packages = [
+    {
+        id: "std-6m",
+        tier: "Standard",
+        name: "6 Month Plan",
+        price: 8999,
+        duration: "6 Months",
+        features: [
+            "Free Glucometer (1 unit)",
+            "50 test strips per month",
+            "2 doctor consultations",
+            "1 nurse check-in per month",
+            "2 diet counseling sessions",
+            "2 HbA1c lab tests"
+        ],
+        popular: true
+    },
+    {
+        id: "plus-6m",
+        tier: "Plus",
+        name: "6 Month Plan",
+        price: 12999,
+        duration: "6 Months",
+        features: [
+            "75 test strips per month",
+            "4 doctor consultations",
+            "2 nurse check-ins per month",
+            "1 diet session per month",
+            "3 comprehensive lab tests"
+        ],
+        popular: false
+    },
+    {
+        id: "prem-12m",
+        tier: "Premium",
+        name: "12 Month Plan",
+        price: 31999,
+        duration: "12 Months",
+        features: [
+            "150 test strips per month",
+            "8 doctor consultations per year",
+            "4 nurse check-ins per month",
+            "18 diet sessions per year",
+            "6 comprehensive lab tests"
+        ],
+        popular: true
+    }
+];
+
+// Cart functionality
+let cart = [];
+let showingAllProducts = false;
+
+function renderProducts(showAll = false) {
+    const grid = document.getElementById('productsGrid');
+    const productsToShow = showAll ? products : products.filter(p => p.featured);
+    
+    grid.innerHTML = productsToShow.map(product => `
+        <div class="product-card" data-category="${product.category}">
+            <div class="product-image">
+                ${product.image}
+                ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+            </div>
+            <div class="product-info">
+                <div class="product-category">${product.category}</div>
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <div class="product-price">₹${product.variants[0].price}</div>
+                <div class="product-actions">
+                    <button class="add-to-cart-btn" onclick="addToCart(${product.id}, 0)">Add to Cart</button>
+                    <button class="view-details-btn" onclick="openProductModal(${product.id})">👁️</button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function renderPackages() {
+    const grid = document.getElementById('packagesGrid');
+    grid.innerHTML = packages.map(pkg => `
+        <div class="package-card ${pkg.popular ? 'featured' : ''}">
+            ${pkg.popular ? '<div class="popular-badge">Most Popular</div>' : ''}
+            <span class="package-tier">${pkg.tier}</span>
+            <h3 class="package-name">${pkg.name}</h3>
+            <div class="package-price">₹${pkg.price.toLocaleString()}</div>
+            <div class="package-duration">${pkg.duration}</div>
+            <ul class="package-features">
+                ${pkg.features.map(feature => `
+                    <li class="package-feature">
+                        <span class="check-icon">✓</span>
+                        <span>${feature}</span>
+                    </li>
+                `).join('')}
+            </ul>
+            <button class="subscribe-btn" onclick="subscribePackage('${pkg.id}')">Subscribe Now</button>
+        </div>
+    `).join('');
+}
+
+function showAllProducts(event) {
+    event.preventDefault();
+    showingAllProducts = true;
+    renderProducts(true);
+    document.querySelector('.product-preview-text').style.display = 'none';
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+}
+
+function addToCart(productId, variantIndex = 0) {
+    const product = products.find(p => p.id === productId);
+    const variant = product.variants[variantIndex];
+    
+    const existingItem = cart.find(item => 
+        item.productId === productId && item.variantIndex === variantIndex
+    );
+    
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({
+            productId,
+            variantIndex,
+            quantity: 1,
+            name: product.name,
+            variant: variant.name,
+            price: variant.price,
+            image: product.image
+        });
+    }
+    
+    updateCart();
+    showNotification(`${product.name} added to cart!`);
+}
+
+function updateCart() {
+    const cartCount = document.getElementById('cartCount');
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    
+    cartCount.textContent = totalItems;
+    cartTotal.textContent = `₹${totalPrice.toLocaleString()}`;
+    
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+            </div>
+        `;
+    } else {
+        cartItems.innerHTML = cart.map((item, index) => `
+            <div class="cart-item">
+                <div class="cart-item-image">${item.image}</div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-price">₹${item.price}</div>
+                    <div class="cart-item-quantity">
+                        <button class="qty-btn" onclick="updateQuantity(${index}, -1)">−</button>
+                        <span class="qty-value">${item.quantity}</span>
+                        <button class="qty-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                        <button class="remove-item" onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+}
+
+function updateQuantity(index, change) {
+    cart[index].quantity += change;
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+    updateCart();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+    showNotification('Item removed from cart');
+}
+
+function toggleCart() {
+    document.getElementById('cartSidebar').classList.toggle('open');
+}
+
+function toggleMobileMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
+
+function openProductModal(productId) {
+    const product = products.find(p => p.id === productId);
+    const modal = document.getElementById('productModal');
+    const modalContent = document.getElementById('modalContent');
+    
+    modalContent.innerHTML = `
+        <button class="close-modal" onclick="closeModal()">×</button>
+        <div class="modal-product-details">
+            <div class="modal-product-image">${product.image}</div>
+            <div class="modal-product-info">
+                <div class="modal-product-category">${product.category}</div>
+                <h2>${product.name}</h2>
+                <div class="modal-product-description">${product.description}</div>
+                <div class="modal-product-price">₹${product.variants[0].price}</div>
+                
+                ${product.variants.length > 1 ? `
+                    <div class="modal-variants">
+                        <div class="modal-variant-label">Select Size:</div>
+                        <div class="modal-variant-options">
+                            ${product.variants.map((v, i) => `
+                                <div class="modal-variant-option ${i === 0 ? 'active' : ''}" 
+                                     onclick="selectVariant(${productId}, ${i})">
+                                    ${v.name} - ₹${v.price}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+                
+                <div class="modal-quantity">
+                    <div class="modal-quantity-label">Quantity:</div>
+                    <div class="modal-quantity-controls">
+                        <button class="modal-qty-btn" onclick="changeModalQty(-1)">−</button>
+                        <span class="modal-qty-value" id="modalQty">1</span>
+                        <button class="modal-qty-btn" onclick="changeModalQty(1)">+</button>
+                    </div>
+                </div>
+                
+                <button class="modal-add-to-cart" onclick="addToCartFromModal(${productId})">
+                    Add to Cart - ₹<span id="modalTotalPrice">${product.variants[0].price}</span>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    modal.classList.add('open');
+    modal.dataset.productId = productId;
+    modal.dataset.selectedVariant = 0;
+}
+
+function closeModal() {
+    document.getElementById('productModal').classList.remove('open');
+}
+
+let modalQty = 1;
+let selectedVariantIndex = 0;
+
+function selectVariant(productId, variantIndex) {
+    const product = products.find(p => p.id === productId);
+    selectedVariantIndex = variantIndex;
+    
+    document.querySelectorAll('.modal-variant-option').forEach((el, i) => {
+        el.classList.toggle('active', i === variantIndex);
+    });
+    
+    const price = product.variants[variantIndex].price;
+    document.querySelector('.modal-product-price').textContent = `₹${price}`;
+    document.getElementById('modalTotalPrice').textContent = price * modalQty;
+}
+
+function changeModalQty(change) {
+    modalQty = Math.max(1, modalQty + change);
+    document.getElementById('modalQty').textContent = modalQty;
+    
+    const productId = parseInt(document.getElementById('productModal').dataset.productId);
+    const product = products.find(p => p.id === productId);
+    const price = product.variants[selectedVariantIndex].price;
+    document.getElementById('modalTotalPrice').textContent = price * modalQty;
+}
+
+function addToCartFromModal(productId) {
+    for (let i = 0; i < modalQty; i++) {
+        addToCart(productId, selectedVariantIndex);
+    }
+    closeModal();
+    modalQty = 1;
+    selectedVariantIndex = 0;
+}
+
+function proceedToCheckout() {
+    if (cart.length === 0) {
+        showNotification('Your cart is empty!', 'error');
+        return;
+    }
+    
+    const message = `Hi! I want to order the following items:\n\n${cart.map(item => 
+        `${item.name} (${item.variant}) x${item.quantity} - ₹${item.price * item.quantity}`
+    ).join('\n')}\n\nTotal: ₹${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)}`;
+    
+    window.open(`https://wa.me/919999999999?text=${encodeURIComponent(message)}`);
+}
+
+function subscribePackage(packageId) {
+    const pkg = packages.find(p => p.id === packageId);
+    const message = `Hi! I want to subscribe to ${pkg.tier} ${pkg.name} (₹${pkg.price}). Please provide more details.`;
+    window.open(`https://wa.me/919999999999?text=${encodeURIComponent(message)}`);
+}
+
+function toggleFaq(element) {
+    const isActive = element.classList.contains('active');
+    
+    // Close all FAQs
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-answer').style.maxHeight = null;
+    });
+    
+    // Open clicked FAQ if it wasn't active
+    if (!isActive) {
+        element.classList.add('active');
+        const answer = element.querySelector('.faq-answer');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+}
+
+function showNotification(message, type = 'success') {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.className = `notification show ${type}`;
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts(false);
+    renderPackages();
+    updateCart();
+});
+
+// Close modal on outside click
+document.getElementById('productModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            // Close mobile menu if open
+            document.getElementById('navLinks').classList.remove('active');
+        }
+    });
+});
+    </script>
+</body>
+</html>
